@@ -179,6 +179,8 @@ if(GCC)
         set(ASAN_LIB libasan.a dl rt m)
         set(ASAN_BIN dl rt m)
     endif(ASAN_CHECK)
+
+    add_definitions(-g -ggdb -gdwarf -funwind-tables -rdynamic -O0)
 endif(GCC)
 
 # ----------------------------------------------------------------------------
